@@ -84,9 +84,7 @@ return [
     'unique'               => ':attribute 已存在',
     'url'                  => ':attribute 无效的格式',
     'captcha'               => ':attribute 错误',
-    'attributes'           => [
-        'captcha'               => '验证码',
-    ],
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -122,5 +120,4 @@ return [
         'password' => '密码',
         'captcha' => '验证码',
     ],
-
 ];
