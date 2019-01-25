@@ -1,0 +1,34 @@
+{
+    "name": "laravel-admin-ext/login-captcha-username",
+    "description": "登录添加验证码和判断用户是否可用 ",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/xiaoxuan6/login-catpcha-user.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "james.xue",
+            "email": "1527736751@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\CaptchaUser\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Encore\\CaptchaUser\\CaptchaUserServiceProvider"
+            ]
+
+        }
+    }
+}
