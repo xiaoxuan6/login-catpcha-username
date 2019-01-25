@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-ext/login-captcha-username",
+    "name": "james.xue/login-captcha-username",
     "description": "登录添加验证码和判断用户是否可用 ",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
