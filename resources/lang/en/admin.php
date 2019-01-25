@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'enabled'               => 'status',
+    'enabled'               => 'Status',
     'online'                => 'Online',
     'login'                 => 'Login',
     'logout'                => 'Logout',
