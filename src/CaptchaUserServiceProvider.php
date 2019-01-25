@@ -24,6 +24,8 @@ class CaptchaUserServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
+            __DIR__.'/../resources/lang/en/admin.php' => resource_path('lang/en/admin.php'),
+            __DIR__.'/../resources/lang/zh-CN/admin.php' => resource_path('lang/zh-CN/admin.php'),
             __DIR__.'/../resources/lang/zh-CN/validation.php' => resource_path('lang/zh-CN/validation.php'),
         ], 'lang');
 
