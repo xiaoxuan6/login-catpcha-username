@@ -3,7 +3,7 @@
     "description": "登录添加验证码和判断用户是否可用 ",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/xiaoxuan6/login-catpcha-user.git",
+    "homepage": "https://github.com/xiaoxuan6/login-catpcha-username.git",
     "license": "MIT",
     "authors": [
         {
