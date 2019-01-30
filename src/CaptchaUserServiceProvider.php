@@ -27,6 +27,7 @@ class CaptchaUserServiceProvider extends ServiceProvider
             __DIR__.'/../resources/lang/en/admin.php' => resource_path('lang/en/admin.php'),
             __DIR__.'/../resources/lang/zh-CN/admin.php' => resource_path('lang/zh-CN/admin.php'),
             __DIR__.'/../resources/lang/zh-CN/validation.php' => resource_path('lang/zh-CN/validation.php'),
+            __DIR__.'/../resources/lang/zh-CN/auth.php' => resource_path('lang/zh-CN/auth.php'),
         ], 'lang');
 
         $this->app->booted(function () {
