@@ -21,9 +21,9 @@ class CaptchaUserController extends Controller
 
     public function postLogin(Request $request)
     {
-        $credentials = $request->only(['username', 'password','captcha']);
+        $credentials = $request->only(['username', 'password']);
 
-        $validator = Validator::make($credentials, [
+        $validator = Validator::make($request->all(), [
             'username' => 'required|string|exists:admin_users,username,enabled,1',
             'password' => 'required',
             'captcha' => 'required|captcha'
@@ -32,8 +32,6 @@ class CaptchaUserController extends Controller
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         }
-
-        unset($credentials['captcha']);
 
         if (Auth::guard('admin')->attempt($credentials)) {
             admin_toastr(trans('admin.login_successful'));

@@ -13,16 +13,6 @@ Second :
 Third :
 
     php artisan migrate
-    
-Fourth ：
-    
-   a、resources/en/admin.php  add
-
-    'enabled'               => 'Status',
-    
-   b、resources/zh-CN/admin.php  add
-   
-    'enabled'               => '状态',
 
 Configuration
  In the extensions section of the config/admin.php file, add some configuration that belongs to this extension.

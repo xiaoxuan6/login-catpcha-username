@@ -90,7 +90,7 @@ class UserController extends Controller
             'off' => ['value' => 0, 'text' => '禁用', 'color' => 'default'],
             'on'  => ['value' => 1, 'text' => '启用', 'color' => 'primary'],
         ];
-        $grid->enabled(trans('admin.enabled'))->switch($states);
+        $grid->enabled(trans('admins.enabled'))->switch($states);
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
 
@@ -168,7 +168,7 @@ class UserController extends Controller
             'on'  => ['value' => 1, 'text' => '启用', 'color' => 'success'],
             'off' => ['value' => 0, 'text' => '禁用', 'color' => 'danger'],
         ];
-        $form->switch('enabled',trans('admin.enabled'))->states($states)->default(1);
+        $form->switch('enabled',trans('admins.enabled'))->states($states)->default(1);
 
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));
