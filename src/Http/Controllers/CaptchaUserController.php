@@ -1,16 +1,17 @@
 <?php
-
+/**
+ * This file is part of PHP CS Fixer.
+ *
+ * (c) vinhson <15227736751@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 namespace Encore\CaptchaUser\Http\Controllers;
 
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Form;
-use Encore\Admin\Layout\Content;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Lang;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\{Auth, Lang, Redirect, Validator};
 
 class CaptchaUserController extends Controller
 {
@@ -33,7 +34,7 @@ class CaptchaUserController extends Controller
             return Redirect::back()->withInput()->withErrors($validator);
         }
 
-        if (Auth::guard('admin')->attempt($credentials)) {
+        if (Auth::guard(config('admin.auth.guard') ?: 'admin')->attempt($credentials)) {
             admin_toastr(trans('admin.login_successful'));
 
             return redirect()->intended(config('admin.route.prefix'));
