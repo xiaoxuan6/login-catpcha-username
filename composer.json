@@ -33,9 +33,9 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "fix-style": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --using-cache=no --ansi"
     },
     "scripts-descriptions": {
-        "test": "Run all tests."
+        "fix-style": "Run style checks and fix violations."
     }
 }
